@@ -15,7 +15,7 @@ def test_add_product_to_cart(driver):
     print("➕ Producto añadido al carrito")
 
     badge = driver.find_element(By.CLASS_NAME, "shopping_cart_badge").text
-    assert badge == "1"
+    assert badge == "1" 
     print("✅ Badge del carrito muestra:", badge)
 
     driver.find_element(By.CLASS_NAME, "shopping_cart_link").click()
@@ -25,5 +25,5 @@ def test_add_product_to_cart(driver):
     print("🧾 Producto en carrito:", producto_en_carrito)
     assert producto_en_carrito != ""
 
-    time.sleep(3)
+    time.sleep(5)
     driver.save_screenshot("docs/evidencias/carrito_ok.png")
