@@ -1,10 +1,30 @@
-# Preentrega Proyecto SauceDemo 🧪
+# Preentrega Proyecto SauceDemo
 
-Este proyecto automatiza pruebas funcionales sobre la web [saucedemo.com](https://www.saucedemo.com), incluyendo:
-
+Este proyecto automatiza pruebas funcionales sobre la web saucedemo.com, incluyendo:
 - ✅ Login exitoso
 - ✅ Verificación del catálogo
 - ✅ Interacción con productos y carrito
+
+🛠 Tecnologías usadas
+- Python
+- Selenium
+- Pytest
+- pytest-html (para generar reportes en HTML)
+- ChromeDriver
+
+📦 Instalación de dependencias
+Primero, asegurate de tener Python instalado. Luego, podés instalar las dependencias con:
+pip install selenium pytest pytest-html
+
+
+O si tenés un archivo requirements.txt, simplemente:
+pip install -r requirements.txt
+
+
+▶️ Cómo correr los tests
+Desde la raíz del proyecto, ejecutá:
+pytest -v --html=reporte.html
+
 
 ## Estructura
 preentrega-maxicenturion/

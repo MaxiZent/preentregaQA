@@ -13,7 +13,7 @@ def test_inventory_elements(driver):
     assert "Swag Labs" in driver.title
     print("✅ Título de la página OK")
 
-    productos = driver.find_elements(By.CLASS_NAME, "inventory_item")
+    productos = driver.find_elements(By.CLASS_NAME, "inventory_item") # Lista de productos
     print(f"🛍️ Se encontraron {len(productos)} productos.")
     assert len(productos) > 0
 
