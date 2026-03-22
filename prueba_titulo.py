@@ -1,13 +1,17 @@
-from selenium import webdriver
-import time 
+from selenium import webdriver                  #Importamos la librería que permite controlar el navegador
+import time                                     #Para hacer pausas visibles (solo demo)
 
-driver = webdriver.Chrome ()
+driver = webdriver.Chrome ()                    #Creamos la instancia del driver → abre una ventana de Chrome vacía
 
 try:
+    driver.get("https://www.saucedemo.com/")    #Navegamos a la URL de Sauce Demo (pantalla de login)
+    print("Titulo:",driver.title)               #Leemos el título de la pestaña → debería salir "Swaq Labs"
+    assert driver.title == "Swag Labs"          #Validamos que el título sea el esperado (asegura que cargó bien)
+    time.sleep(2)    
+    print("✅ Título correcto")
     
-    driver.get("https://www.saucedemo.com/")
-    print("Titulo:",driver.title)
-    assert driver.title == "Swag Labs"
-    time.sleep(2)
+except Exception as e:                          #Captura cualquier error en el bloque try
+    print(f"Error en login: {e}")
+    raise                                       #avisa a pytest que hubo un error#Pausa de 2 s para que lo veas (luego la quitaremos)
 finally:
-    driver.quit()
+    driver.quit()                               #Cierre limpio: mata la sesión y la ventana
