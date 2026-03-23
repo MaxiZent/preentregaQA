@@ -1,13 +1,37 @@
-# Calculadora QA — Clase 05
+# Preentrega Proyecto SauceDemo
 
-## Cómo ejecutar
+Este proyecto automatiza pruebas funcionales sobre la web saucedemo.com, incluyendo:
+- ✅ Login exitoso
+- ✅ Verificación del catálogo
+- ✅ Interacción con productos y carrito
 
-1. Abrí `index.html` en tu navegador.
-2. Usá DevTools (F12) para inspeccionar elementos.
-3. Verificá que cada selector sea único y estable.
+🛠 Tecnologías usadas
+- Python
+- Selenium
+- Pytest
+- pytest-html (para generar reportes en HTML)
+- ChromeDriver
 
-## Objetivos cumplidos
+📦 Instalación de dependencias
+Primero, asegurate de tener Python instalado. Luego, podés instalar las dependencias con:
+pip install selenium pytest pytest-html
 
-- Vista estática construida con HTML + CSS externo.
-- Identificadores estables (`id`, `name`, `class`) aplicados.
-- Selectores documentados en `selectors.md` para futuros tests UI.
+
+O si tenés un archivo requirements.txt, simplemente:
+pip install -r requirements.txt
+
+
+▶️ Cómo correr los tests
+Desde la raíz del proyecto, ejecutá:
+pytest -v --html=reporte.html
+
+
+## Estructura
+preentrega-maxicenturion/
+├── tests/                  # Pruebas automatizadas 
+├── docs/                   # Evidencias y reporte HTML 
+├── evidencias/             # Capturas de pantalla 
+└── reporte.html            # Reporte de ejecución
+├── conftest.py             # Fixture para Selenium
+├── selectors.md            # Documentación de selectores
+├── requirements.txt        # Dependencias
